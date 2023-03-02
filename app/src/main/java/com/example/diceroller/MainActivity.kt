@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val diceNum = binding.diceNum.text.toString().toInt()
         val random = List(diceNum){ Random.nextInt(1,wallsNum+1)}
         val randomToString = random.toString()
-        binding.textView.text = getString(R.string.roll_result, randomToString)
+        binding.textView.text = randomToString
     }
 
 
