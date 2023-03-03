@@ -6,14 +6,14 @@ import com.example.diceroller.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.rollButton.setOnClickListener{generate()}
     }
-    fun generate(){
+    private fun generate(){
         val wallsNum = binding.wallsNum.text.toString().toInt()
         val diceNum = binding.diceNum.text.toString().toInt()
         val random = List(diceNum){ Random.nextInt(1,wallsNum+1)}
