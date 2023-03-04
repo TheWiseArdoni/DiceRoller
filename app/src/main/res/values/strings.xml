@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Dice Roller</string>
     <string name="rollButton">Roll The Dice!</string>
-    <string name="roll_result">Result will be shown here</string>
+    <string name="roll_result">Roll result will be shown here</string>
     <string name="diceNum">No. Of Dice</string>
     <string name="wallNum">No. Of Walls</string>
+    <string name="addDiceButton">Add dice</string>
+    <string name="diceList">%sD%s \n</string>
 </resources>
