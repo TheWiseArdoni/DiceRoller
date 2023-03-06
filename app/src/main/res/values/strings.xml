@@ -5,5 +5,5 @@
     <string name="diceNum">No. Of Dice</string>
     <string name="wallNum">No. Of Walls</string>
     <string name="addDiceButton">Add dice</string>
-    <string name="diceList">%sD%s \n</string>
+    <string name="diceList">Added dice will appear here</string>
 </resources>
