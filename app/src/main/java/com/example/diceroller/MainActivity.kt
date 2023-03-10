@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.rollButton.setOnClickListener{generate()}
         binding.addDiceButton.setOnClickListener{addDice()}
+        binding.clearButton.setOnClickListener{clearList()}
     }
     private fun generate(){
         val rollResultList: MutableList<String> = mutableListOf()
         for (item in diceAmountList.indices) {
             val random = List(diceAmountList[item]){Random.nextInt(1, wallsList[item]+1)}
-            rollResultList.add(random.toString())
+            rollResultList.add(random.joinToString(prefix = "", separator = " ", postfix = ""))
         }
-        binding.rollResult.text = rollResultList.joinToString(prefix = "", separator = "\n", postfix = "")
+        binding.rollResult.text = rollResultList.joinToString(prefix = "", separator = " ", postfix = "")
     }
     private fun addDice(){
         val wallsAmt = binding.wallsNum.text.toString()
@@ -34,5 +35,8 @@ class MainActivity : AppCompatActivity() {
         wallsList.add(wallsAmt.toInt())
         diceAmountList.add(diceAmt.toInt())
         binding.diceList.text = diceList.joinToString(prefix = "", separator = "\n", postfix = "")
+    }
+    private fun clearList(){
+        diceList.removeAt(-1)
     }
 }
