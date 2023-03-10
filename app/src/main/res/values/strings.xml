@@ -7,4 +7,5 @@
     <string name="addDiceButton">Add dice</string>
     <string name="diceList">Added dice will appear here</string>
     <string name="clearButton">Clear last dice</string>
+    <string name="noDiceToast">No dice in list!</string>
 </resources>
